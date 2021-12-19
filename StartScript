@@ -1,0 +1,12 @@
+local bindable = Instance.new("BindableFunction")
+function bindable.OnInvoke(response)
+	print("invoked")
+	setclipboard("https://www.youtube.com/channel/UCRZwdKTBn75vbSWNBuatOtQ")
+end
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Subscribe to me on youtube (maybe)",
+	Text = "Consider looking at my channel for updates on the script",
+	Duration = 60,
+	Callback = bindable,
+	Button1 = "Copy link to channel"
+})
